@@ -21,9 +21,12 @@ Write it out as pseudocode here, filling in the blanks and adding more fake code
 
 ``` 
 function leaving_the_house {
-    always_need ___
-    if ___ then bring ___
-    otherwise ___
+    always_need car_keys, phone, wallet
+    if Tuesday or Wednesday then bring backpack, computer, lunch
+    if Thursday then bring backpack, computer
+    if raining then bring umbrella
+    if cold then bring jacket
+    otherwise pass
     
 }
 ```
@@ -32,7 +35,20 @@ From your pseudocode, decide on your arguments and write out a working R functio
 
 ```{r}
 #| label: leaving-the-house-definition
-leaving_the_house <- function() {}
+leaving_the_house <- function(day) {
+  constants <- "Bring phone, wallet, and keys."
+  print(constants)
+  if (day == "Thursday") {
+    print("Also bring backpack and laptop")
+  }
+  if (day == "Tuesday"|day == "Wednesday") {
+    print("Also bring backpack, laptop, and lunch")
+  }
+  else {
+    print("That's it!")
+  }
+}
+leaving_the_house("Sunday")
 ```
 
 
