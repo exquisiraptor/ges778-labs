@@ -24,10 +24,7 @@ function leaving_the_house {
     always_need car_keys, phone, wallet
     if Tuesday or Wednesday then bring backpack, computer, lunch
     if Thursday then bring backpack, computer
-    if raining then bring umbrella
-    if cold then bring jacket
     otherwise pass
-    
 }
 ```
 
